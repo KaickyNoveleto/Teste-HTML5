@@ -6,15 +6,15 @@
     <title>Document</title>
     <style>
         body {
-            background-color: rgb(1, 22, 29); /* Define a cor de fundo */
-            color: white; /* Define a cor do texto para contraste */
-            font-family: Arial, sans-serif; /* Define uma fonte padrão */
+            background-color: rgb(1, 22, 29);
+            color: white;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
         }
         h3 {
-            color: #00aaff; /* Cor dos títulos */
+            color: #00aaff;
             margin-top: 20px;
         }
         p {
@@ -22,30 +22,38 @@
             font-size: 20px;
         }
         a {
-            text-decoration: none; /* Remove sublinhado dos links */
+            text-decoration: none;
         }
         img {
-            border: none; /* Remove bordas ao redor das imagens */
-            max-width: 100%; /* Faz com que as imagens sejam responsivas */
-            height: auto; /* Mantém a proporção da imagem */
+            border: none;
+            max-width: 100%;
+            height: auto;
         }
         .container {
             width: 100%;
-            margin: 0 auto; /* Centraliza o conteúdo */
+            margin: 0 auto;
             display: flex;
             gap: 40px;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
         }
-        
-        a img{
+        figure {
+            display: inline-block;
+            margin: 0;
+            text-align: center;
+        }
+        a img {
             border-radius: 10px;
             width: 200px;
             height: 200px;
         }
+        figcaption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #00aaff;
+        }
     </style>
-    
 </head>
 <body>
 
@@ -56,44 +64,62 @@
     </p>
     <h3>HUB Central Utilitário do T.I</h3>
     <div class="container">
+        <figure>
+            <a href="http://10.0.0.98/" class="image-link">
+                <img src="/PagueMenos.png" alt="Pague Menos Logo" width="300">
+            </a>
+            <figcaption>Portal do Pague Menos</figcaption>
+        </figure>
 
-        
-        <a href="http://10.0.0.98/" class="image-link">
-            <img src="/PagueMenos.png" alt="Pague Menos Logo" width="300">
-        </a>
+        <figure>
+            <a href="https://servicos.supermercadospaguemenos.com.br/front/central.php" class="image-link">
+                <img src="/rapidesk.png" alt="RapidDesk" width="300">
+            </a>
+            <figcaption>RapidDesk</figcaption>
+        </figure>
 
-        <a href="https://servicos.supermercadospaguemenos.com.br/front/central.php" class="image-link">
-            <img src="/rapidesk.png" alt="RapidDesk" width="300">
-        </a>
+        <figure>
+            <a href="https://grafana.supermercadospaguemenos.com.br/?orgId=1" class="image-link">
+                <img src="/Grafana.png" alt="Grafana Dashboards">
+            </a>
+            <figcaption>Grafana Dashboards</figcaption>
+        </figure>
 
-        <a href="https://grafana.supermercadospaguemenos.com.br/?orgId=1" class="image-link">
-            <img src="/Grafana.png" alt="Grafana Dashboards">
-        </a>
+        <figure>
+            <a href="https://platform.converja.com/converja/index.php?r=CardGroups/admin" class="image-link">
+                <img src="/converja 2.0.webp" alt="Converja Central de Telefonia IP">
+            </a>
+            <figcaption>Converja Central de Telefonia IP</figcaption>
+        </figure>
 
-        <a href="https://platform.converja.com/converja/index.php?r=CardGroups/admin" class="image-link">
-            <img src="/converja 3.webp" alt="Converja Central de Telefonia IP">
-        </a>
+        <figure>
+            <a href="https://zabbix.supermercadospaguemenos.com.br/zabbix.php?action=dashboard.view" class="image-link">
+                <img src="/Zabbix.png" alt="Zabbix Monitoring">
+            </a>
+            <figcaption>Zabbix Monitoring</figcaption>
+        </figure>
 
-        <a href="https://zabbix.supermercadospaguemenos.com.br/zabbix.php?action=dashboard.view" class="image-link">
-            <img src="/Zabbix.png" alt="Zabbix Monitoring">
-        </a>
+        <figure>
+            <a href="http://epraja1.no-ip.org:8083/glpi/front/ticket.php" class="iamge-link">
+                <img src="/Glpi.png" alt="GLPI">
+            </a>
+            <figcaption>GLPI</figcaption>
+        </figure>
 
-        <a href="http://epraja1.no-ip.org:8083/glpi/front/ticket.php" class="iamge-link">
-            <img src="/Glpi.png" alt="GLPI">
-        </a>
+        <figure>
+            <a href="https://360.nddprint.com/standard-reports/jobs" class="image-link">
+                <img src="/NDD.webp" alt="NDD Print Portal 360">
+            </a>
+            <figcaption>NDD Print Portal 360</figcaption>
+        </figure>
 
-        <a href="https://360.nddprint.com/standard-reports/jobs" class="image-link">
-            <img src="/NDD.webp" alt="NDD Print Portal 360">
-        </a>
-
-        <a href="https://supermercadospaguemenos.sharepoint.com/sites/ti-suporte/SitePages/LearningTeamHome.aspx?&OR=Teams-HL&CT=1725883639107&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA4MDIxMjAwOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D" class="image-link">
-            <img src="/Sharepoint.webp" alt="Sharepoint T.I Apenas com Autorização">
-        </a>
-
-        
+        <figure>
+            <a href="https://supermercadospaguemenos.sharepoint.com/sites/ti-suporte/SitePages/LearningTeamHome.aspx?&OR=Teams-HL&CT=1725883639107&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA4MDIxMjAwOCIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D" class="image-link">
+                <img src="/Sharepoint.webp" alt="Sharepoint T.I Apenas com Autorização">
+            </a>
+            <figcaption>Sharepoint do T.I</figcaption>
+        </figure>
     </div>
-
-    
 
 </body>
 </html>
