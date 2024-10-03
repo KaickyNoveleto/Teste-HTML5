@@ -3,83 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            background-color: rgb(1, 22, 29);
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        h3 {
-            color: #00aaff;
-            margin-top: 20px;
-        }
-        p {
-            margin: 20px;
-            font-size: 20px;
-        }
-        a {
-            text-decoration: none;
-        }
-        img {
-            border: none;
-            max-width: 100%;
-            height: auto;
-        }
-        .container {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            gap: 40px;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        figure {
-            display: inline-block;
-            margin: 0;
-            text-align: center;
-        }
-        a img {
-            border-radius: 10px;
-            width: 200px;
-            height: 200px;
-        }
-        figcaption {
-            margin-top: 10px;
-            font-size: 16px;
-            color: #00aaff;
-        }
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 80%;
-            max-width: 800px;
-        }
-        th, td {
-            border: 1px solid #00aaff;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: rgba(0, 170, 255, 0.2);
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
+    <title>HUB Central Utilitário do T.I</title>
 </head>
 <body>
-
     <header>
-        <p>
-            Site de teste para programação de HTML5
-            <br><br>
-            Data de Inicio: 10/09/2024
-        </p>
-        <h3>HUB Central Utilitário do T.I</h3>
+        <p id="paragrafo">Site de teste para programação de HTML5<br>Data de Inicio: 10/09/2024</p>
+        <h3 class="tituloPrograma">HUB Central Utilitário do T.I</h3>
     </header>
-
     <main>
         <div class="container">
             <figure>
@@ -139,19 +70,60 @@
             </figure>
         </div>
 
-        <table>
-            <tr>
-                <br><br><br>
-                <th>Chamados</th>
-                <th>Requerente</th>
-                <th>Tempo Interno Para Solução</th>
-            </tr>
-            <tr>
-                <td>VPN</td>
-                <td>Roberto</td>
-                <td>01-10-2024 07:11</td>
-            </tr>
+        <table id="chamados-table">
+            <thead>
+                <tr>
+                    <th>Chamados</th>
+                    <th>Requerente</th>
+                    <th>Data de Abertura</th>
+                    <th>Prazo para Solução</th>
+                </tr>
+            </thead>
         </table>
+
+        <form id="info-form" onsubmit="adicionarChamado(event)">
+            <h3>Registro de Chamado</h3>
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+        
+            <label for="requerente">Requerente:</label>
+            <input type="text" id="requerente" name="requerente" required>
+        
+            <label for="dataAbertura">Data de Abertura:</label>
+            <input type="datetime-local" id="dataAbertura" name="dataAbertura" required>
+        
+            <label for="prazo">Prazo para Solução:</label>
+            <input type="date" id="prazo" name="prazo" required>
+        
+            <button type="submit">Enviar</button>
+        </form>
+        <div class="frutas">
+            limao
+        </div>
     </main>
+
+    <script>
+        function adicionarChamado(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            const titulo = document.getElementById("titulo").value;
+            const requerente = document.getElementById("requerente").value;
+            const dataAbertura = document.getElementById("dataAbertura").value.replace('T', ' ');
+            const prazo = document.getElementById("prazo").value;
+
+            const table = document.getElementById("chamados-table").getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+
+            newRow.innerHTML = `
+                <td>${titulo}</td>
+                <td>${requerente}</td>
+                <td>${dataAbertura}</td>
+                <td>${prazo}</td>
+            `;
+
+            // Limpa os campos do formulário
+            document.getElementById("info-form").reset();
+        }
+    </script>
 </body>
 </html>
